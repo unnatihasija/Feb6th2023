@@ -1,0 +1,19 @@
+ID: Feb6th2023
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: hdi_feb2023
+   type: hdb
+   path: hdi_feb2023
+   requires:
+    - name: hdi_hdi_feb2023
+
+resources:
+ - name: hdi_hdi_feb2023
+   parameters:
+      config:
+         schema: FEB2023
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
